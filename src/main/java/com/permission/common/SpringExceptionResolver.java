@@ -22,14 +22,16 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
                 JsonData result = JsonData.fail(ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else {
-                log.error("unknow exception,");
+                log.error("unknow json exception,url"+url);
                 JsonData result = JsonData.fail(defaultMsg);
                 mv = new ModelAndView("jsonView", result.toMap());
             }
         } else if (url.endsWith(".page")) {
+            log.error("unknow page exception,url"+url);
             JsonData result = JsonData.fail(defaultMsg);
             mv = new ModelAndView("exception", result.toMap());
         } else {
+            log.error("unknow exception,url"+url);
             JsonData result = JsonData.fail(defaultMsg);
             mv = new ModelAndView("jsonView", result.toMap());
         }
