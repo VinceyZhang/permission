@@ -16,7 +16,7 @@ public class SysDeptServiceImpl implements SysDeptService {
 
     @Override
     public void save(DeptParam param) {
-        //BeanValidator.check(param);
+        BeanValidator.check(param);
 
     }
 }
