@@ -1,6 +1,9 @@
 package com.permission.dao;
 
 import com.permission.model.SysDept;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface SysDeptMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +17,10 @@ public interface SysDeptMapper {
     int updateByPrimaryKeySelective(SysDept record);
 
     int updateByPrimaryKey(SysDept record);
+
+    List<SysDept> getAllDept();
+
+    List<SysDept> getChildDeptListByLevel(@Param("level") String level);
+
+    void batchUpdateLevel(@Param("sysDeptList") List<SysDept> sysDeptList);
 }
