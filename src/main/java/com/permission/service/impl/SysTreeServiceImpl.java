@@ -78,17 +78,17 @@ public class SysTreeServiceImpl implements SysTreeService {
             List<DeptLevelDto> tempDeptList = (List<DeptLevelDto>) levelDeptMap.get(nextLevel);
             if (CollectionUtils.isNotEmpty(tempDeptList)) {
                 //排序
-                Collections.sort(tempDeptList, deptLevelDtoComparator);
+                Collections.sort(tempDeptList, deptSeqComparator);
                 //设置下一部门
-                deptLevelDto.setDeptList(deptLevelDtoList);
+                deptLevelDto.setDeptList(tempDeptList);
                 //进入下一级
-                transformDeptTree(deptLevelDtoList, nextLevel, levelDeptMap);
+                transformDeptTree(tempDeptList, nextLevel, levelDeptMap);
 
             }
         }
     }
 
-    public Comparator<DeptLevelDto> deptLevelDtoComparator = new Comparator<DeptLevelDto>() {
+    public Comparator<DeptLevelDto> deptSeqComparator = new Comparator<DeptLevelDto>() {
         @Override
         public int compare(DeptLevelDto o1, DeptLevelDto o2) {
             return o1.getSeq() - o2.getSeq();

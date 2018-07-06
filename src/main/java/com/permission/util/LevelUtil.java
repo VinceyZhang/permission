@@ -7,11 +7,11 @@ public class LevelUtil {
 
     public final static String ROOT = "0";
 
-    public static String calculateLevel(String parentLeve,int parentId) {
-    if(StringUtils.isBlank(parentLeve)){
+    public static String calculateLevel(String parentLevel,int parentId) {
+    if(StringUtils.isBlank(parentLevel)){
         return ROOT;
     }else{
-        return StringUtils.join(parentLeve,SEPATOR);
+        return StringUtils.join(parentLevel,SEPATOR,parentId);
     }
     }
 }
