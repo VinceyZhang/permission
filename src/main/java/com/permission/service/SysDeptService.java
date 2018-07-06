@@ -11,9 +11,6 @@ import java.util.List;
  */
 public interface SysDeptService {
 
-
-
-
     void save(DeptParam param);
 
     void update(DeptParam param);

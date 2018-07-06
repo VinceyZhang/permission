@@ -1,6 +1,6 @@
 package com.permission.exception;
 
-public class ParamException extends RuntimeException {
+public class ParamException extends PermissionException {
     public ParamException() {
         super();
     }

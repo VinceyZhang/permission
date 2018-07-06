@@ -89,7 +89,7 @@ public class SysDeptServiceImpl implements SysDeptService {
 
     private boolean checkExist(Integer parentId, String deptName, Integer deptId) {
 
-        return true;
+        return sysDeptMapper.countByNameAndParentId(parentId,deptName,deptId)>0;
     }
 
     private String getLevel(Integer deptId) {
