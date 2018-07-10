@@ -19,6 +19,13 @@ public class UserController {
     @Resource
     private SysUserService sysUserService;
 
+    @RequestMapping("/logout.page")
+    public void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        request.getSession().invalidate();
+        String path = "signin.jsp";
+        response.sendRedirect(path);
+    }
+
     @RequestMapping("/login.page")
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
@@ -42,7 +49,7 @@ public class UserController {
             if (StringUtils.isBlank("ret")) {
                 response.sendRedirect(ret);
             } else {
-                response.sendRedirect("/admin/index.jsp");
+                response.sendRedirect("/admin/index.page");
             }
         }
         request.setAttribute("error", errorMsg);
@@ -50,7 +57,7 @@ public class UserController {
         if (StringUtils.isNotBlank(ret)) {
             request.setAttribute("ret", ret);
         }
-        String path="signin.jsp";
-        request.getRequestDispatcher(path).forward(request,response);
+        String path = "signin.jsp";
+        request.getRequestDispatcher(path).forward(request, response);
     }
 }
