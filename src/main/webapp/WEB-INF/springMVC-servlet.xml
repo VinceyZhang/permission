@@ -33,7 +33,7 @@
 
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
 
-    <!--<bean class="com.permission.common.SpringExceptionResolver"/>-->
+    <bean class="com.permission.common.SpringExceptionResolver"/>
     <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
