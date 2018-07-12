@@ -21,7 +21,20 @@ public class Test {
         System.out.println(g == (a + b));
         System.out.println(g.equals(a + b));
 
+        System.out.print("test():"+test());
+    }
 
+    public static Integer test() {
 
+        try {
+            System.out.print("try()");
+            return 100;
+        } catch (Exception e) {
+            System.out.print("catch()");
+            return 3;
+        } finally {
+            System.out.print("finally()");
+            return 10;
+        }
     }
 }
