@@ -1,5 +1,6 @@
 package com.design.factory.method;
 
+
 public class CarStore {
 
     private CarFactory carFactory;
@@ -8,8 +9,6 @@ public class CarStore {
     public void showCar(String type) {
         getCarFactory().orderCar(type);
     }
-
-
 
     public CarFactory getCarFactory() {
         return carFactory;

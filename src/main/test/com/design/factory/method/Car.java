@@ -1,5 +1,9 @@
 package com.design.factory.method;
 
+
+/**
+ * 抽象的产品
+ */
 public abstract class Car {
 
     protected Integer price;

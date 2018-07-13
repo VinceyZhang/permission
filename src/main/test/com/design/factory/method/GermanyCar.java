@@ -1,6 +1,6 @@
 package com.design.factory.method;
 
-public class GermanyCar extends Car {
+public abstract class GermanyCar extends Car {
 
 
     public GermanyCar() {

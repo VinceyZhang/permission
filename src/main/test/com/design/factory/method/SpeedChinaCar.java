@@ -1,5 +1,8 @@
 package com.design.factory.method;
 
+/**
+ * 具体的汽车产品
+ */
 public class SpeedChinaCar extends ChinaCar {
 
     private Integer speed;

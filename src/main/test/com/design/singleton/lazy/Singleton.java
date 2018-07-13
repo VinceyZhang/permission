@@ -1,11 +1,11 @@
-package com.design.singleton;
+package com.design.singleton.lazy;
 
 /**
  * 懒加载
  */
 public class Singleton {
 
-    private static Singleton singleton;
+    private volatile static Singleton singleton;
 
     private Singleton() {
     }
