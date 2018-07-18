@@ -1,6 +1,6 @@
 package com.design.factory.abstractor;
 
-public class GermanyCarFactory implements CarFactory {
+public class GermanyPartFactory implements PartFactory {
 
     @Override
     public Tyre createTyre() {

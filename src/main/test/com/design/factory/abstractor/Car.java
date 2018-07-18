@@ -2,7 +2,13 @@ package com.design.factory.abstractor;
 
 public abstract class Car {
 
+    /**
+     * 窗户
+     */
     protected  Window window;
+    /**
+     * 轮胎，只列举两个
+     */
     protected Tyre tyre;
     private  String name;
 

@@ -1,9 +1,10 @@
 package com.design.factory.abstractor;
 
 public class ChinaCar extends Car {
-    private ChinaCarFactory chinaCarFactory;
+    //国产车拥有国产工厂
+    private ChinaPartFactory chinaCarFactory;
 
-    public ChinaCar(ChinaCarFactory chinaCarFactory) {
+    public ChinaCar(ChinaPartFactory chinaCarFactory) {
         this.chinaCarFactory = chinaCarFactory;
     }
 

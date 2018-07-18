@@ -1,6 +1,6 @@
 package com.design.factory.abstractor;
 
-public interface CarFactory {
+public interface PartFactory {
 
     Tyre createTyre();
 
