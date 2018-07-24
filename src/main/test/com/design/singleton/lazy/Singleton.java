@@ -14,10 +14,11 @@ public class Singleton {
         if (singleton == null) {
             synchronized (Singleton.class) {
                 if (singleton == null) {
-                    return new Singleton();
+                    singleton = new Singleton();
+                    return singleton;
                 }
             }
         }
-        return null;
+        return singleton;
     }
 }
